@@ -5,8 +5,17 @@ import triggerEvent from './triggerEvent.js';
  * This module deals with caching images
  * @module ImageCache
  */
+function isMobileDevice () {
+  const pattern = new RegExp(
+    'Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini'
+  );
 
-let maximumSizeInBytes = 1024 * 1024 * 1024; // 1 GB
+  return pattern.test(navigator.userAgent);
+}
+
+let maximumSizeInBytes = isMobileDevice()
+  ? 1024 * 1024 * 100 // 100mb for mobile
+  : 1024 * 1024 * 1024; // 1 GB
 let cacheSizeInBytes = 0;
 
 // Dictionary of imageId to cachedImage objects
