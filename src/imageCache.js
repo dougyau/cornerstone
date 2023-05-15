@@ -14,8 +14,8 @@ function isMobileDevice () {
 }
 
 let maximumSizeInBytes = isMobileDevice()
-  ? 1024 * 1024 * 100 // 100mb for mobile
-  : 1024 * 1024 * 2048; // 2 GB
+  ? 1024 * 1024 * 500 // 500mb for mobile
+  : 1024 * 1024 * 1024 * 3.5; // 2 GB
 let cacheSizeInBytes = 0;
 
 // Dictionary of imageId to cachedImage objects
