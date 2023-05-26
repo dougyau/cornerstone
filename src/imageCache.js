@@ -200,6 +200,7 @@ export function removeImageLoadObject (imageId) {
   };
 
   triggerEvent(events, EVENTS.IMAGE_CACHE_CHANGED, eventDetails);
+  triggerEvent(events, EVENTS.IMAGE_CACHE_PROMISE_REMOVED, { imageId });
   decache(cachedImage.imageLoadObject);
 
   delete imageCacheDict[imageId];

@@ -1,4 +1,4 @@
-/*! cornerstone-core - 0.0.0-semantically-released - 2023-05-15 | (c) 2016 Chris Hafey | https://github.com/cornerstonejs/cornerstone */
+/*! cornerstone-core - 0.0.0-semantically-released - 2023-05-26 | (c) 2016 Chris Hafey | https://github.com/cornerstonejs/cornerstone */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
@@ -74,7 +74,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "ed37878f518ebd4fd59a";
+/******/ 	var hotCurrentHash = "c8d3e41946a9ece47f0b";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -3278,6 +3278,9 @@ function removeImageLoadObject(imageId) {
     image: cachedImage
   };
   Object(_triggerEvent_js__WEBPACK_IMPORTED_MODULE_1__["default"])(_events_js__WEBPACK_IMPORTED_MODULE_0__["events"], _events_js__WEBPACK_IMPORTED_MODULE_0__["default"].IMAGE_CACHE_CHANGED, eventDetails);
+  Object(_triggerEvent_js__WEBPACK_IMPORTED_MODULE_1__["default"])(_events_js__WEBPACK_IMPORTED_MODULE_0__["events"], _events_js__WEBPACK_IMPORTED_MODULE_0__["default"].IMAGE_CACHE_PROMISE_REMOVED, {
+    imageId: imageId
+  });
   decache(cachedImage.imageLoadObject);
   delete imageCacheDict[imageId];
 }
