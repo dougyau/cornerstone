@@ -1,6 +1,6 @@
 {
-  "name": "cornerstone-core",
-  "version": "0.0.0-semantically-released",
+  "name": "@dougyau/cornerstone-core",
+  "version": "2.6.1",
   "description": "HTML5 Medical Image Viewer Component",
   "main": "./dist/cornerstone.js",
   "keywords": [
@@ -14,7 +14,11 @@
   "module": "./dist/cornerstone.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cornerstonejs/cornerstone.git"
+    "url": "https://github.com/dougyau/cornerstone.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "docs:api": "npm run clean:docs && documentation build src/index.js -f md -c documentation.yml -o docs/api.md",
